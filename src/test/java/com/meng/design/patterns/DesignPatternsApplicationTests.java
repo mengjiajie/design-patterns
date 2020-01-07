@@ -1,6 +1,7 @@
 package com.meng.design.patterns;
 
 import com.meng.design.patterns.strategy.service.impl.advanced.Strategy;
+import com.meng.design.patterns.strategy.service.impl.harder.PayFactroy;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -33,6 +34,11 @@ class DesignPatternsApplicationTests {
          * 策略枚举实现策略模式测试
          */
 //        Strategy.WXPAY.success("成功");
+
+        /**
+         * 工厂模式结合策略模式
+         */
+        PayFactroy.getByUserType("wx").algorithm("支付成功");
     }
 
 }
